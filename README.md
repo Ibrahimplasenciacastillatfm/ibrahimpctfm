@@ -13,3 +13,4 @@ En el repositorio se incluyen los siguientes archivos:
     - Pieza_tapa_TFM --> Parte superior de cierre del conjunto y soporte para el módulo solar fotovoltaico
     - Tapa_1_TFM --> Pieza de cierre del hueco del interruptor del ESP32
     - Tapa_2_TFM --> Pieza de cierre del hueco del conector USB del ESP32
+- ANEXO_IX_Resultados_Prueba_Carretera --> Datos registrados por el sistema diseñado y desarrollado en este TFM como prueba de validación del sistema. Se corresponde con los datos recogidos en una prueba en carretera con el equipo montado en un vehículo real, bajo unas condiciones de conducción reales.
