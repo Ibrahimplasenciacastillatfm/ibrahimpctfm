@@ -1,0 +1,27 @@
+ESP32 Wifi & Bluetooth Battery
+Microcontrolador del dispositivo sensor:
+https://www.espressif.com/sites/default/files/documentation/esp32_datasheet_en.pdf
+
+RS PRO, 3.7V, 18650, Lithium-Ion Rechargable Battery, 2.6Ah
+Batería para el microcontrolador del dispositivo sensor
+https://docs.rs-online.com/9c01/A700000008874176.pdf
+
+Módulo Solar Fotovoltaico 100mA, 3V, 0.3W, 65x48mm
+Módulo solar fotovoltaico
+https://www.amazon.es/Solares-Peque%C3%B1as-C%C3%A9lulas-Proyectos-Cient%C3%ADficos/dp/B0B5XR5CQV/ref=sr_1_3?__mk_es_ES=%C3%85M%C3%85%C5%BD%C3%95%C3%91&keywords=celulas%2Bsolares%2B65x48mm&qid=1693261405&s=industrial&sr=1-3&th=1
+
+Módulo AD620
+Amplificador de instrumentación
+https://www.amazon.es/Amplificador-Voltaje-Microvoltios-Instrumentaci%C3%B3n-Transmisor/dp/B0BQ5CYBZ4/ref=sr_1_4_sspa?keywords=ad620&qid=1693261912&sr=8-4-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&psc=1
+
+Termistor NTC
+Sensor de temperatura
+https://panda-bg.com/datasheet/918-103844-Thermistor-NTC-500mW-5-VISHAY.pdf
+
+Raspberry Pi 3 Model B v1.2
+Microcontrolador del dispositivo central
+https://components101.com/sites/default/files/component_datasheet/Raspberry%20Pi%203%20Datasheet.pdf
+
+Módulo BN-880 GPS
+GPS y Brújula
+https://maxterdrone.com/es/modulos-gps/1193-beitian-bn-880-gps.html
