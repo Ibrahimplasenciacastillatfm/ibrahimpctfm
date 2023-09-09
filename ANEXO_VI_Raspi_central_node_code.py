@@ -119,27 +119,29 @@ def get_orient():
     bus.write_byte_data(0x1E, 0x02, 0x00) #COMENTAR SI SE VA A EMPLEAR EL OTRO MODO
    
     try:
-            # HMC5883 address, 0x1E(30) - dirección I2C del sensor
-            # Read data back from 0x03(03), 6 bytes - Se leerá un total de 6 bytes de datos del sensor, comenzando por la dirección 0X03 hasta la dirección 0X08
-            # X-Axis MSB, X-Axis LSB, Z-Axis MSB, Z-Axis LSB, Y-Axis MSB, Y-Axis LSB - LOs datos de campo magnético medidos en cada eje se almacenan en 2 bytes cada uno (MSB - Most Significant Byte y LSB - Less Significant Byte)
-            data = bus.read_i2c_block_data(0x1E, 0x03, 6) #se leen 6 bytes de datos del sensor comenzando por la dirección 0x03. Estos bytes contienen las lecturas de los ejes X, Y, Z del magnetómetro
-            xMag = data[0] * 256 + data[1] -201
-            if xMag > 32767:
-                xMag -= 65536
- 
-            zMag = data[2] * 256 + data[3]
-            if zMag > 32767:
-                zMag -= 65536
- 
-            yMag = data[4] * 256 + data[5] +432
-            if yMag > 32767:
-                yMag -= 65536
-            # Se obtiene la orientación (brújula) a partir de las lecturas de campo magnético en los ejes X e Y usando la función anteriormente definida y los valores de campo magnético extraídos
-            orient = calculate_orient(xMag, yMag)
-           
-            return orient #valor de orientación calculada en grados
- 
-       
+        # HMC5883 address, 0x1E(30) - dirección I2C del sensor
+        # Read data back from 0x03(03), 6 bytes - Se leerá un total de 6 bytes de datos del sensor, comenzando por la dirección 0X03 hasta la dirección 0X08
+        # X-Axis MSB, X-Axis LSB, Z-Axis MSB, Z-Axis LSB, Y-Axis MSB, Y-Axis LSB - LOs datos de campo magnético medidos en cada eje se almacenan en 2 bytes cada uno (MSB - Most Significant Byte y LSB - Less Significant Byte)
+        data = bus.read_i2c_block_data(0x1E, 0x03, 6) #se leen 6 bytes de datos del sensor comenzando por la dirección 0x03. Estos bytes contienen las lecturas de los ejes X, Y, Z del magnetómetro
+        xMag = data[0] * 256 + data[1] -201
+        if xMag > 32767:
+            xMag -= 65536
+
+        zMag = data[2] * 256 + data[3]
+        if zMag > 32767:
+            zMag -= 65536
+
+        yMag = data[4] * 256 + data[5] +432
+        if yMag > 32767:
+            yMag -= 65536
+        # Se obtiene la orientación (brújula) a partir de las lecturas de campo magnético en los ejes X e Y usando la función anteriormente definida y los valores de campo magnético extraídos
+        orient = calculate_orient(xMag, yMag)
+   
+        return orient #valor de orientación calculada en grados
+
+    except KeyboardInterrupt: 
+        pass
+
 #Función para obtener cardinal correspondiente a un ángulo de orientación determinado
 def get_cardinal_direction(orient_deg):
    
